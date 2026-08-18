@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2026 at 02:09 PM
+-- Generation Time: Aug 18, 2026 at 01:37 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -62,8 +62,9 @@ CREATE TABLE `foods` (
 --
 
 INSERT INTO `foods` (`id`, `food_name`, `description`, `price`, `quantity`, `status`) VALUES
-(2, 'Adobo', 'yeah', '50.00', 1, 'available'),
-(3, 'lechon', 'shesh', '50.00', 1, 'unavailable');
+(2, 'Adobo', 'yeah', '50.00', 0, 'available'),
+(3, 'lechon', 'shesh', '50.00', 1, 'unavailable'),
+(4, 'kinilaw', 'isda', '50.00', 10, 'available');
 
 -- --------------------------------------------------------
 
@@ -88,12 +89,15 @@ INSERT INTO `reservation` (`id`, `user_id`, `food_id`, `quantity`, `reservation_
 (1, 123, 2, 1, '2026-08-17 09:48:36', 'Pending'),
 (2, 123, 2, 1, '2026-08-17 09:52:01', 'Pending'),
 (3, 123, 2, 1, '2026-08-17 09:52:31', 'Pending'),
-(4, 1, 2, 1, '2026-08-17 10:09:22', 'Pending'),
-(5, 1, 2, 1, '2026-08-17 10:09:48', 'Pending'),
+(4, 1, 2, 1, '2026-08-17 12:55:12', ''),
+(5, 1, 2, 1, '2026-08-17 12:57:23', ''),
 (6, 1, 2, 3, '2026-08-17 10:15:00', 'Pending'),
 (7, 1, 2, 1, '2026-08-17 10:28:27', 'Pending'),
-(8, 1, 2, 1, '2026-08-17 10:30:29', 'Pending'),
-(9, 1, 2, 1, '2026-08-17 05:28:31', 'Pending');
+(8, 1, 2, 1, '2026-08-17 13:18:15', 'Approved'),
+(9, 1, 2, 1, '2026-08-17 05:28:31', 'Pending'),
+(10, 1, 2, 52, '2026-08-17 06:25:13', 'Pending'),
+(11, 1, 2, 34, '2026-08-17 06:59:55', 'Pending'),
+(12, 1, 4, 2, '2026-08-17 13:17:15', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -158,13 +162,13 @@ ALTER TABLE `admin_acc`
 -- AUTO_INCREMENT for table `foods`
 --
 ALTER TABLE `foods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`
